@@ -4,11 +4,21 @@
 // sum all distances to get result
 
 const { problemInput } = require("./day1Input");
+let inputArr = problemInput.trim().split("\n");
 
-const numList1 = [3, 4, 2, 1, 3, 3];
-const numList2 = [4, 3, 5, 3, 9, 3];
-
+const numList1 = [];
+const numList2 = [];
 const distancesArr = [];
+
+let temporaryArr = [];
+for (let i = 0; i < inputArr.length; i++) {
+  temporaryArr.push(inputArr[i].split("   "));
+}
+
+for (let x = 0; x < temporaryArr.length; x++) {
+  numList1.push(parseInt(temporaryArr[x][0]));
+  numList2.push(parseInt(temporaryArr[x][1]));
+}
 
 function getDistance(arr1, arr2) {
   while (arr1.length > 0) {
@@ -43,4 +53,3 @@ function handlePairDistance(arr) {
 }
 
 console.log(getDistance(numList1, numList2));
-console.log(problemInput);
