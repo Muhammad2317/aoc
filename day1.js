@@ -4,15 +4,15 @@
 // sum all distances to get result
 
 const { problemInput } = require("./day1Input");
-let inputArr = problemInput.trim().split("\n");
+let inputString = problemInput.trim().split("\n");
 
 const numList1 = [];
 const numList2 = [];
 const distancesArr = [];
 
 let temporaryArr = [];
-for (let i = 0; i < inputArr.length; i++) {
-  temporaryArr.push(inputArr[i].split("   "));
+for (let i = 0; i < inputString.length; i++) {
+  temporaryArr.push(inputString[i].split("   "));
 }
 
 for (let x = 0; x < temporaryArr.length; x++) {
